@@ -426,11 +426,11 @@ const GasMonitoringDashboard = () => {
             <tbody className="divide-y">
               {alerts.slice(0, 10).map((alert, idx) => (
                 <tr key={idx} className="hover:bg-gray-50">
-                  <td className="px-4 py-3 text-sm">{alert.timestamp.toLocaleString()}</td>
-                  <td className="px-4 py-3 text-sm font-medium">{alert.gas.toUpperCase()}</td>
-                  <td className="px-4 py-3 text-sm">{alert.value}</td>
+                  <td className="px-4 py-3 text-sm text-black">{alert.timestamp.toLocaleString()}</td>
+                  <td className="px-4 py-3 text-sm font-medium text-black">{alert.gas.toUpperCase()}</td>
+                  <td className="px-4 py-3 text-sm text-black">{alert.value}</td>
                   <td className="px-4 py-3">
-                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${alert.type === 'danger' ? 'bg-red-100 text-red-700' : 'bg-yellow-100 text-yellow-700'}`}>
+                    <span className={`px-2 py-1 rounded-full text-xs font-semibold text-black ${alert.type === 'danger' ? 'bg-red-100 text-red-700' : 'bg-yellow-100 text-yellow-700'}`}>
                       {alert.type.toUpperCase()}
                     </span>
                   </td>
