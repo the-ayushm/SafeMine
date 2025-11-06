@@ -423,14 +423,14 @@ const GasMonitoringDashboard = () => {
                 <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">Status</th>
               </tr>
             </thead>
-            <tbody className="divide-y">
+            <tbody className="divide-y bg-white">
               {alerts.slice(0, 10).map((alert, idx) => (
                 <tr key={idx} className="hover:bg-gray-50">
-                  <td className="px-4 py-3 text-sm text-black">{alert.timestamp.toLocaleString()}</td>
-                  <td className="px-4 py-3 text-sm font-medium text-black">{alert.gas.toUpperCase()}</td>
-                  <td className="px-4 py-3 text-sm text-black">{alert.value}</td>
+                  <td className="px-4 py-3 text-sm text-gray-900 font-medium opacity-100">{alert.timestamp.toLocaleString()}</td>
+                  <td className="px-4 py-3 text-sm font-medium text-gray-900 opacity-100">{alert.gas.toUpperCase()}</td>
+                  <td className="px-4 py-3 text-sm text-gray-900 opacity-100">{alert.value}</td>
                   <td className="px-4 py-3">
-                    <span className={`px-2 py-1 rounded-full text-xs font-semibold text-black ${alert.type === 'danger' ? 'bg-red-100 text-red-700' : 'bg-yellow-100 text-yellow-700'}`}>
+                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${alert.type === 'danger' ? 'bg-red-100 text-red-700' : 'bg-yellow-100 text-yellow-700'}`}>
                       {alert.type.toUpperCase()}
                     </span>
                   </td>
